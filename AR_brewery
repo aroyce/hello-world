@@ -1,0 +1,30 @@
+<!-- AR.js by @jerome_etienne GitHub: https://github.com/jeromeetienne/ar.js -->
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+
+<script src="https://cdn.rawgit.com/donmccurdy/aframe-extras/v5.0.0/dist/aframe-extras.min.js"></script>
+
+<script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+
+<script src="https://rawgit.com/protyze/aframe-curve-component/master/dist/aframe-curve-component.min.js"></script>
+
+<script src="https://rawgit.com/protyze/aframe-alongpath-component/master/dist/aframe-alongpath-component.min.js"></script>
+
+<a-scene arjs="sourceType: webcam; debugUIEnabled: false">
+
+  <a-assets>
+ 
+    <a-asset-item id="status" src="status-cards.jpg" crossorigin="anonymous"></a-asset-item>
+  </a-assets>
+
+  <a-marker-camera preset="hiro">
+    
+    <!-- Scale up the original to 200% of the marker size -->
+    <a-entity scale="2 2 2">
+
+      <a-entity id="status" ></a-entity>
+
+    </a-entity>
+
+  </a-marker-camera>
+
+</a-scene>
